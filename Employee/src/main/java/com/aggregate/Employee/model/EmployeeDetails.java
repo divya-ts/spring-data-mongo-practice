@@ -1,21 +1,24 @@
 package com.aggregate.Employee.model;
 
-import java.security.Timestamp;
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "employeeDetails")
-public class employeeDetails {
+public class EmployeeDetails {
 
-	
+	@Id
 	private Integer empID;
-	private Timestamp timestamp;
+	
+	private Date timestamp;
 	private String empName;
 	private Double age;
-	private employeeAddress address;
+	private EmployeeAddress address;
 	
 	
-	public employeeDetails(Integer empID, Timestamp timestamp, String empName, Double age,
-			employeeAddress address) {
+	public EmployeeDetails(Integer empID, Date timestamp, String empName, Double age,
+			EmployeeAddress address) {
 		super();
 		this.empID = empID;
 		this.timestamp = timestamp;
@@ -30,10 +33,10 @@ public class employeeDetails {
 	public void setEmpID(Integer empID) {
 		this.empID = empID;
 	}
-	public Timestamp getTimestamp() {
+	public Date getTimestamp() {
 		return timestamp;
 	}
-	public void setTimestamp(Timestamp timestamp) {
+	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
 	public String getEmpName() {
@@ -48,10 +51,10 @@ public class employeeDetails {
 	public void setAge(Double age) {
 		this.age = age;
 	}
-	public employeeAddress getAddress() {
+	public EmployeeAddress getAddress() {
 		return address;
 	}
-	public void setAddress(employeeAddress address) {
+	public void setAddress(EmployeeAddress address) {
 		this.address = address;
 	}
 }

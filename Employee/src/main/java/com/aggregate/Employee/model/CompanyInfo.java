@@ -1,6 +1,6 @@
 package com.aggregate.Employee.model;
 
-public class companyInfo {
+public class CompanyInfo {
  
 	private String companyName;
 	private String city;
@@ -8,7 +8,7 @@ public class companyInfo {
 	private Double experience;
 	
 	
-	public companyInfo(String companyName, String city, String country, Double experience) {
+	public CompanyInfo(String companyName, String city, String country, Double experience) {
 		super();
 		this.companyName = companyName;
 		this.city = city;

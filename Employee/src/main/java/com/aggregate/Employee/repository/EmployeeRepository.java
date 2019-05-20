@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.aggregate.Employee.model.employeeDetails;
+import com.aggregate.Employee.model.EmployeeDetails;
 
 @Repository
-public interface employeeRepo extends MongoRepository<employeeDetails,String>{
+public interface EmployeeRepository extends MongoRepository<EmployeeDetails,String>{
 
-	public List<employeeDetails> Employees();
+	public List<EmployeeDetails> findAll();
 	
 }

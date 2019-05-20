@@ -1,16 +1,16 @@
 package com.aggregate.Employee.model;
 
-public class employeeAddress {
+public class EmployeeAddress {
 
 	private String home;
 	private Double pincode;
-    private companyInfo CompanyInfo;
+    private CompanyInfo companyInfo;
     
-	public employeeAddress(String home, Double pincode, companyInfo companyInfo) {
+	public EmployeeAddress(String home, Double pincode, CompanyInfo companyInfo) {
 		super();
 		this.home = home;
 		this.pincode = pincode;
-		CompanyInfo = companyInfo;
+		this.companyInfo = companyInfo;
 	}
 	public String getHome() {
 		return home;
@@ -24,11 +24,11 @@ public class employeeAddress {
 	public void setPincode(Double pincode) {
 		this.pincode = pincode;
 	}
-	public companyInfo getCompanyInfo() {
-		return CompanyInfo;
+	public CompanyInfo getCompanyInfo() {
+		return companyInfo;
 	}
-	public void setCompanyInfo(companyInfo companyInfo) {
-		CompanyInfo = companyInfo;
+	public void setCompanyInfo(CompanyInfo companyInfo) {
+		this.companyInfo = companyInfo;
 	}
     
     
