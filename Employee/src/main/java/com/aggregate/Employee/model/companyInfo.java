@@ -6,6 +6,15 @@ public class companyInfo {
 	private String city;
 	private String country;
 	private Double experience;
+	
+	
+	public companyInfo(String companyName, String city, String country, Double experience) {
+		super();
+		this.companyName = companyName;
+		this.city = city;
+		this.country = country;
+		this.experience = experience;
+	}
 	public String getCompanyName() {
 		return companyName;
 	}
