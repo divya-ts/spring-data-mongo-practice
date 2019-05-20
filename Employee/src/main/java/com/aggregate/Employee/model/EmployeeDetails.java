@@ -9,28 +9,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class EmployeeDetails {
 
 	@Id
-	private Integer empID;
-	
+	private int empID;
 	private Date timestamp;
 	private String empName;
 	private Double age;
 	private EmployeeAddress address;
-	
-	
-	public EmployeeDetails(Integer empID, Date timestamp, String empName, Double age,
-			EmployeeAddress address) {
-		super();
-		this.empID = empID;
-		this.timestamp = timestamp;
-		this.empName = empName;
-		this.age = age;
-		this.address = address;
-	}
-
-	public Integer getEmpID() {
+	private CompanyInfo company;
+	public int getEmpID() {
 		return empID;
 	}
-	public void setEmpID(Integer empID) {
+	public void setEmpID(int empID) {
 		this.empID = empID;
 	}
 	public Date getTimestamp() {
@@ -57,4 +45,13 @@ public class EmployeeDetails {
 	public void setAddress(EmployeeAddress address) {
 		this.address = address;
 	}
+	public CompanyInfo getCompany() {
+		return company;
+	}
+	public void setCompany(CompanyInfo company) {
+		this.company = company;
+	}
+	
+	
+
 }

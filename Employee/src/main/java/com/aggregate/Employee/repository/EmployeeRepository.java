@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.aggregate.Employee.model.EmployeeDetails;
 
 @Repository
-public interface EmployeeRepository extends MongoRepository<EmployeeDetails,String>{
+public interface EmployeeRepository extends MongoRepository<EmployeeDetails,Integer>{
 
 	public List<EmployeeDetails> findAll();
 	

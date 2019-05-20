@@ -7,14 +7,6 @@ public class CompanyInfo {
 	private String country;
 	private Double experience;
 	
-	
-	public CompanyInfo(String companyName, String city, String country, Double experience) {
-		super();
-		this.companyName = companyName;
-		this.city = city;
-		this.country = country;
-		this.experience = experience;
-	}
 	public String getCompanyName() {
 		return companyName;
 	}

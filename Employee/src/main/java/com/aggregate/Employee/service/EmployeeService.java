@@ -19,8 +19,13 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 
-	public EmployeeDetails save(EmployeeDetails employeeDetails) {
-		EmployeeDetails emp=new EmployeeDetails(employeeDetails.getEmpID(),employeeDetails.getTimestamp(),employeeDetails.getEmpName(),employeeDetails.getAge(),employeeDetails.getAddress());
-		return employeeRepository.save(emp);
+	public String save(EmployeeDetails employeeDetails) {
+		try {
+		employeeRepository.save(employeeDetails);
+		return "Successfully saved";
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			return "Error";
+		}
 	}
 }

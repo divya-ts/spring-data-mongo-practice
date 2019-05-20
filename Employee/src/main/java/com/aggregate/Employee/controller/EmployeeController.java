@@ -3,7 +3,9 @@ package com.aggregate.Employee.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,6 +15,8 @@ import com.aggregate.Employee.model.EmployeeDetails;
 import com.aggregate.Employee.service.EmployeeService;
 
 @RestController
+@CrossOrigin
+@RequestMapping("/api/v1")
 public class EmployeeController {
 
 	@Autowired
@@ -23,8 +27,9 @@ public class EmployeeController {
 		return employeeService.getAllEmployees();
 	}
 	
-	@RequestMapping(method=RequestMethod.POST)
-	public EmployeeDetails saveEmployees(@RequestBody EmployeeDetails employeeDetails){
-		return employeeService.save(employeeDetails);
+	@PostMapping("/newEmployee")
+	public String saveEmployees(@RequestBody EmployeeDetails employeeDetails){
+		String response= employeeService.save(employeeDetails);
+		return response;
 	}
 }
