@@ -8,15 +8,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.aggregate.Employee.model.employeeDetails;
 import com.aggregate.Employee.repository.employeeRepo;
+import com.aggregate.Employee.service.EmployeeService;
 
 @Controller
 public class EmployeeController {
 
 	@Autowired
-	private employeeRepo employeeRepository;
+	EmployeeService employeeService;
 	
 	@GetMapping("/employees")
 	public List<employeeDetails> getInfo(){
-		return employeeRepository.findAll();
+		return employeeRepository.Employees();
 	}
 }

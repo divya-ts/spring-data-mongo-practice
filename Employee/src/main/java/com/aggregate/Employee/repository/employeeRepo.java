@@ -10,6 +10,6 @@ import com.aggregate.Employee.model.employeeDetails;
 @Repository
 public interface employeeRepo extends MongoRepository<employeeDetails,String>{
 
-	public List<employeeDetails> findAll();
+	public List<employeeDetails> Employees();
 	
 }
